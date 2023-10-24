@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:store/translate.dart';
+import 'package:store/controller/translate.dart';
 import 'package:store/view/indrotaction_screen.dart';
 import 'package:store/view/login.dart';
 import 'package:store/view/settings.dart';

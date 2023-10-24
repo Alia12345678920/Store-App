@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:store/view/productdetails.dart';
 import '../controller/homeScreenController.dart';
-import '../productSearch.dart';
+import 'productSearch.dart';
 
 class homeScreen extends StatefulWidget {
    homeScreen({super.key});

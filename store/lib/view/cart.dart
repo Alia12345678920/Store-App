@@ -71,10 +71,10 @@ class _cartState extends State<cart> {
                                         fontSize: 25, color: Color(0xff49796B),
                                         fontWeight: FontWeight.bold,
                                       ),),
-                                    // Text("${controller.cartProduct[index].description}",
-                                    //   maxLines: 2,
-                                    //   overflow: TextOverflow.ellipsis,
-                                    // ),
+                                    Text("${controller.cartProduct[index].description}",
+                                      maxLines: 2,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
                                     Spacer(),
                                     // SizedBox(height: 15,),
                                     Row(children: [
@@ -93,9 +93,9 @@ class _cartState extends State<cart> {
 
                                     ],),
                                     MaterialButton(
-                                      minWidth: 150,
-                                      padding: EdgeInsets.all(10),
-                                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)) ,
+                                      minWidth: 30,
+                                      padding: EdgeInsets.only(right: 1, left: 5,),
+                                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)) ,
                                       color: Color(0xff49796B),
                                       onPressed: (){
                                         controller.removeFromCart(controller.product!.products![index],

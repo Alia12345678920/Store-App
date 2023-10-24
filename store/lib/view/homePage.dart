@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controller/homePageController.dart';
 import '../controller/homeScreenController.dart';
-import '../productSearch.dart';
+import 'productSearch.dart';
 
 class homePage extends StatefulWidget {
    homePage({super.key});

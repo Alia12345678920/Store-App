@@ -41,13 +41,20 @@ class _productDetailsState extends State<productDetails> {
               itemBuilder: (BuildContext context,int e) => Image.network(widget.product.products![widget.index].images![e],),
             ),
           ),
-          SizedBox(height: 20,),
+          SizedBox(height: 5,),
           Container(
             padding: EdgeInsets.all(20),
             // color: Colors.grey,
-            child: Text("${widget.product.products![widget.index].description}"),),
-          SizedBox(height: 20,),
-
+            child: Text("${widget.product.products![widget.index].description}",
+            ),),
+          Container(
+            padding: EdgeInsets.all(20),
+            // color: Colors.grey,
+            child: Text("The price is : " "${widget.product.products![widget.index].price}" " \$"),),
+          Container(
+            padding: EdgeInsets.all(20),
+            // color: Colors.grey,
+            child: Text("The rating is : " "${widget.product.products![widget.index].rating}"),),
           Container(
             padding: EdgeInsets.only(left: 40 , right: 40),
             child: Row(
