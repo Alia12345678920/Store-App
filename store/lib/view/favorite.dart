@@ -59,7 +59,7 @@ class _favoriteState extends State<favorite> {
                                             fontWeight: FontWeight.bold,
                                           ),),
                                         Text("${controller.cartProduct[index].description}",
-                                          maxLines: 2,
+                                          maxLines: 1,
                                           overflow: TextOverflow.ellipsis,
                                         ),
                                         Spacer(),

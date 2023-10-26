@@ -72,7 +72,7 @@ class _cartState extends State<cart> {
                                         fontWeight: FontWeight.bold,
                                       ),),
                                     Text("${controller.cartProduct[index].description}",
-                                      maxLines: 2,
+                                      maxLines: 1,
                                       overflow: TextOverflow.ellipsis,
                                     ),
                                     Spacer(),

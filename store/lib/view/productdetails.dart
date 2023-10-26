@@ -5,6 +5,10 @@ import 'package:get/get_core/src/get_main.dart';
 
 import '../controller/homeScreenController.dart';
 import '../model/productsModel.dart';
+import 'package:store/controller/theme_data/theme_data_light.dart';
+import 'package:store/controller/theme_data/theme_data_dark.dart';
+import 'package:store/controller/SharedPrefrences/CasheHelper.dart';
+
 
 class productDetails extends StatefulWidget {
   productsModel product;
@@ -23,9 +27,72 @@ class _productDetailsState extends State<productDetails> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+     return
+       // GetMaterialApp(
+    //     theme: CacheData.getData(key: 'Mode')??false?getThemeDataLight():getThemeDataDark(),
+    //  home:
+      Scaffold(
       appBar: AppBar(
-        title: Text("Product Details"),),
+        title: Text("Product Details"),
+      actions: [
+      Column(
+      //mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          // TextButton(
+          //     onPressed: (){},
+          //     child: Text('TextButton')),
+          // const Divider(
+          //   thickness: 1,
+          //   indent: 100,
+          //   endIndent: 100,
+          // ),
+          // SizedBox(
+          //   height: 90,
+          //   width: 100,
+          //   child: FittedBox(
+          //     fit: BoxFit.fill,
+          //     child: Switch(
+          //         value: TF,
+          //         onChanged: (value){
+          //           setState(() {
+          //             TF=value;
+          //           });
+          //
+          //         },
+          //       activeThumbImage: NetworkImage('https://freepngimg.com/thumb/categories/1738.png'),
+          //      // inactiveThumbColor:Colors.grey[100] ,
+          //       inactiveThumbImage: NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbRmuMatEH3ymhjMmyYKL6S_kONjiYYEWq-e1Vy2cN26fmDgVH7dFl0A26A9I66KcBycI&usqp=CAU'),
+          //     ),
+          //   ),
+          // ),
+          // const Divider(
+          //   thickness: 1,
+          //   indent: 100,
+          //   endIndent: 100,
+          // ),
+          Transform.scale(
+            scale: 1,
+            child:  Switch(
+              value: CacheData.getData(key: 'Mode')??false,
+              onChanged: (value) {
+                setState(() {
+                  CacheData.setData(key: 'Mode', value: value
+                  ).then((value) {
+                    print(value);
+                    print(CacheData.getData(key: 'Mode'));
+                  });
+                });
+              }
+              ,
+              // activeThumbImage: NetworkImage('https://freepngimg.com/thumb/categories/1738.png'),
+              // inactiveThumbColor:Colors.grey[100] ,
+              // inactiveThumbImage: NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbRmuMatEH3ymhjMmyYKL6S_kONjiYYEWq-e1Vy2cN26fmDgVH7dFl0A26A9I66KcBycI&usqp=CAU'),
+            ),
+          ),
+      ],
+      ),]
+      ),
+
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -90,7 +157,7 @@ class _productDetailsState extends State<productDetails> {
 
         ],
       )
-
+    //  )
 
     );
   }}

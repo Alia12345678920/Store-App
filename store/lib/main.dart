@@ -3,13 +3,19 @@ import 'package:get/get.dart';
 import 'package:store/controller/translate.dart';
 import 'package:store/view/indrotaction_screen.dart';
 import 'package:store/view/login.dart';
+import 'package:store/view/productdetails.dart';
 import 'package:store/view/settings.dart';
+import 'package:store/controller/SharedPrefrences/CasheHelper.dart';
+import 'package:store/controller/theme_data/theme_data_light.dart';
+import 'package:store/controller/theme_data/theme_data_dark.dart';
+
 import 'package:store/view/splash.dart';
-import 'package:store/view/start.dart';
 import 'view/homePage.dart';
 
-void main() {
-  runApp(const MyApp());
+Future<void> main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await CacheData.cacheInitialization();
+  runApp( MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -27,7 +33,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Color(0xff49796B).withOpacity(0.6)),
         useMaterial3: true,
       ),
-      home: homePage(),
+      home: SplashScreen(),
     );
   }
 }

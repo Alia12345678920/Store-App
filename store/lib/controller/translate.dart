@@ -15,7 +15,8 @@ class Translate implements Translations{
   "i":"لا توجد اي عناصر",
       "h":"لا توجد اي ملاحظات",
       "s":"الإعدادات",
-      "l":"اختار اللغة : "
+      "l":"اختار اللغة : ",
+     "z":"اختار الثيم"
 
 },
     "en":{
@@ -29,7 +30,9 @@ class Translate implements Translations{
       "i":"There are no favorite items",
       "h":"There are no notes",
       "s":"setting",
-      "l":"choose the language : "
+      "l":"choose the language : ",
+      "z":"choose Theme"
+
     },
   };
 }
